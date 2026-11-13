@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Axivra - the smart study platform for B.Tech 1st year students: detailed notes, practice tests and progress tracking.">
+  <title>Axivra | Smart Study Platform for B.Tech 1st Year</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <canvas id="bg"></canvas>
+  <div class="glow glow-a"></div>
+  <div class="glow glow-b"></div>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="nav">
+    <a href="#home" class="brand"><span class="brand-icon">◈</span>AXIVRA</a>
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" data-view="home">Home</a></li>
+        <li><a href="#subjects" data-view="subjects">Subjects</a></li>
+        <li><a href="#quiz" data-view="quiz">Practice</a></li>
+        <li><a href="#progress" data-view="progress">Progress</a></li>
+      </ul>
+    </nav>
+    <button id="menuBtn" aria-label="Open menu">☰</button>
+  </header>
+
+  <main>
+
+    <!-- ============ HOME VIEW ============ -->
+    <section id="view-home" class="view active">
+
+      <div class="hero">
+        <p class="chip">⚡ Made for B.Tech 1st Year</p>
+        <h1 class="hero-title">AXIVRA</h1>
+        <p class="hero-sub">Study smarter. Think futuristic.<br>Detailed notes, practice tests and progress tracking, all in one place.</p>
+
+        <div class="search-wrap">
+          <input type="text" id="search" placeholder="Search any topic: matrices, laser, pointers, transformer..." autocomplete="off">
+          <div id="searchResults" class="search-results"></div>
+        </div>
+
+        <div class="hero-buttons">
+          <a href="#subjects" class="btn">Start Learning</a>
+          <a href="#quiz" class="btn btn-ghost">Take a Test</a>
+        </div>
+
+        <div class="stats" id="heroStats"></div>
+      </div>
+
+      <section id="subjects" class="container reveal">
+        <h2 class="section-title">Choose Your <span>Subject</span></h2>
+        <p class="section-sub">Har subject ke topic-wise notes aur practice questions ready hain.</p>
+        <div class="subject-grid" id="subjectGrid"></div>
+      </section>
+
+      <section class="container reveal">
+        <h2 class="section-title">Why <span>Axivra?</span></h2>
+        <div class="feature-grid">
+          <div class="glass feature"><div class="f-icon">📘</div><h3>Easy Notes</h3><p>Simple language, formulas, examples aur "Yaad rakho" tips ke saath.</p></div>
+          <div class="glass feature"><div class="f-icon">🎯</div><h3>Practice Tests</h3><p>Subject-wise aur mixed MCQ tests with instant feedback.</p></div>
+          <div class="glass feature"><div class="f-icon">📊</div><h3>Track Progress</h3><p>Kitne topics complete hue aur best score kitna hai, sab ek jagah.</p></div>
+          <div class="glass feature"><div class="f-icon">📱</div><h3>Works Everywhere</h3><p>Mobile, tablet aur laptop, har screen par smooth chalta hai.</p></div>
+        </div>
+      </section>
+
+    </section>
+
+    <!-- ============ NOTES VIEW ============ -->
+    <section id="view-notes" class="view">
+      <div class="notes-layout">
+        <aside id="notesSide" class="glass side"></aside>
+        <article id="notesMain" class="glass note"></article>
+      </div>
+    </section>
+
+    <!-- ============ QUIZ VIEW ============ -->
+    <section id="view-quiz" class="view">
+      <div class="container narrow" id="quizBox"></div>
+    </section>
+
+    <!-- ============ PROGRESS VIEW ============ -->
+    <section id="view-progress" class="view">
+      <div class="container narrow" id="progressBox"></div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p><b>AXIVRA</b> · Smart study platform for B.Tech 1st year</p>
+    <p class="muted">Made by [Tera Naam] · CSE326 Project · © 2026</p>
+  </footer>
+
+  <button id="topBtn" aria-label="Back to top">↑</button>
+  <div id="toast"></div>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
